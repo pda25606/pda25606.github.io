@@ -17,14 +17,14 @@
       var scene1 = document.getElementById('s1'); 
       for (var i = -5; i <= 3; i++) {
         for (var j = 0; j < 5; j++) {
-       var box = document.createdElement ('a-box');
+       var box = document.createElement ('a-box');
         box.setAttribute('dinamyc-body','');
         box.setAttribute('position', (2 * i + 1) + ' ' + (j + 0.5) + ' -10');
         box.setAttribute('color', 'firebrick');
         box.setAttribute('scale', '2 1 1');
         scene1.appendChild(box);
+        }
       }
-    }
     </script>
   </body>
 </html>
