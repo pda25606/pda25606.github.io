@@ -1,7 +1,7 @@
 
 <head>
-  <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v7.0.0/dist/aframe-extras.min.js"></script>
   <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v7.0.0/dist/aframe-extras.min.js"></script>
   <script>
     AFRAME.registerComponent('sounding',{
       tick: function () {
@@ -44,7 +44,7 @@
         </a-entity>
       <a-entity gltf-model="#bird" scale="5 5 5" rotation="0 180 0" shadow="receive: false"
          sound="src:#hawk; poolSize: 2" sounding
-         animation="property: position; from: 50 50 500; to: 50 50 -500; dur: 330000; loop: true" animation-mixed>
+         animation="property: position; from: 50 50 500; to: 50 50 -500; dur: 33000; loop: true" animation-mixer>
       </a-entity>
    </a-scene>
   <script>
