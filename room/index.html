@@ -71,4 +71,25 @@
     <a-cylinder height="19" radius="0.05" position="0.4 8 0"></a-cylinder>
     <a-box color="silver" scale="0.05 5 1" position="0.4 8 0"></a-box>
     </a-box>
+<script>
+  var scene1 = document.getElementById('s1');
+  for (var i = 0; i < 10; i++) {
+    var t = document.getelementById('table'). cloneNode(true) ;
+    var x = Math.random() * 40 - 20;
+    var z = Math.random() * 40 - 20;
+    t.setattribute('position', x + ' 2'+ z);
+    t.setAttribute('rotation', '0 '+ Math.random() * 90 + '0');
+    scene1. appendchild(t);
+  }
+for (var i = 0; i ‹ 20; i++) {
+  var c = document.getelementById(' chair'). cloneNode(true);
+  var x = Math.random() * 40 - 20;
+  var z = Math.random() * 40 - 20;
+  c. setAttribute('position', × + ' 6 '+ z);
+  scene1.appendchild(c);
+}
+document.getElementById('hammer').setAttribute('position', (Math.random() * 30 - 15) + ' 5 ' + (Math.random() * 30 - 15)); 
+document.getElementById('torch').setAttribute('position', (Math.random() * 30 - 15) + ' 3 ' + (Math.random() * 30 - 15)); 
+document. getElementById('key').setAttribute('position', (Math. random() * 30 - 15) + ' 1' + (Math.random() * 30 - 15));
+</script>
 </htlm>
