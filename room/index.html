@@ -8,9 +8,9 @@
       AFRAME.registerComponent('updating', {
         tick: function () {
           if (gas) time--;
-          if (time < 0) message= "Game over...";
+          if (time < 0) message = "Game over...";
           if (message != "") this.el.setAttribute('value', message);
-          else this.el.setAttribute('value', ''+ Math.round(time / 100));
+          else this.el.setAttribute('value', '' + Math.round(time / 100));
          
           var pos = document.getElementById('cam').getAttribute('position');
           if (pos.x < -19) pos.x = -19;
