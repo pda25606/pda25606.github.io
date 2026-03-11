@@ -20,6 +20,35 @@
           document.getElementById('cam').setAttribute('position', pos);
         }
     });
+  AFRAME.registerComponent('focusing', {
+    init: function () {
+      var el = this.el;
+      el.addEventlistener('mouseenter', function () {
+        var pos = document.getElementById('cam').getAttribute('position');
+        
+        if (el.id "door") {
+          if(!locked && time >= 0) { el.components.sound.playSound(); message = "Well done!"; }
+          return;
+        }
+        else if (el.id == "window") {
+          if (tool) {
+            document.querySelector('a-scene').removeAttribute('animation');
+            document querySelector('a-scene').setAttribute('animation', 'property: fog.far; to: 1000; dur: 50000');
+            gas = false;
+            el.components.sound.playSound(); el. setAttribute('blending', 'subtractive");
+         }
+          return;
+        }
+        el.removeAttribute('dynamic-body');
+        el.setAttribute('animation', 'property: position; to: ' + pos.x ' 0 ' + pos.z);
+        
+        if (el. id == "torch") document.getElementaById('light').setAttribute('animation', 'property: visible; to: true');
+        else if (el.id == "key") locked = false;
+        else if (el.id == "hammer") tool = true;
+        setTimeout (function () { el.remove(); }, 3000);
+      });
+    }
+  });
     </script>
   </head>
   <body>
