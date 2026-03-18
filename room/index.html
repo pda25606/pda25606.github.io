@@ -33,7 +33,7 @@
         else if (el.id == "window") {
           if (tool) {
             document.querySelector('a-scene').removeAttribute('animation');
-            document querySelector('a-scene').setAttribute('animation', 'property: fog.far; to: 1000; dur: 50000');
+            document.querySelector('a-scene').setAttribute('animation', 'property: fog.far; to: 1000; dur: 50000');
             gas = false;
             el.components.sound.playSound(); el. setAttribute('blending', 'subtractive");
          }
@@ -42,7 +42,7 @@
         el.removeAttribute('dynamic-body');
         el.setAttribute('animation', 'property: position; to: ' + pos.x ' 0 ' + pos.z);
         
-        if (el. id == "torch") document.getElementaById('light').setAttribute('animation', 'property: visible; to: true');
+        if (el.id == "torch") document.getElementaById('light').setAttribute('animation', 'property: visible; to: true');
         else if (el.id == "key") locked = false;
         else if (el.id == "hammer") tool = true;
         setTimeout (function () { el.remove(); }, 3000);
