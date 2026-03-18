@@ -10,31 +10,16 @@
               if (gas) time--;
               if (time < 0) message = "Game over...";
               if (message != "") this.el.setAttribute('value', message);
-                else this.el.setAttribute('value', '' + Math.round(time / 100));
+              else this.el.setAttribute('value', '' + Math.round(time / 100));
 
-                var pos = coords.getAttribute('position');
-                if (pos.x < -19) pos.x = -19;
-                if (pos.x > 19) pos.x = 19;
-                if (pos.z < -19) pos.z = -19;
-                if (pos.z > 19) pos.z = 19;
-                coords.setAttribute('position', pos);
+              var pos = coords.getAttribute('position');
+              if (pos.x < -19) pos.x = -19;
+              if (pos.x > 19) pos.x = 19;
+              if (pos.z < -19) pos.z = -19;
+              if (pos.z > 19) pos.z = 19;
+              document.getElementById('cam').setAttribute('position', pos);
             }
         });
-      AFRAME.registerComponent('updating', {
-        tick: function () {
-          if (gas) time--;
-          if (time < 0) message = "Game over...";
-          if (message != "") this.el.setAttribute('value', message);
-          else this.el.setAttribute('value', '' + Math.round(time / 100));
-         
-          var pos = document.getElementById('cam').getAttribute('position');
-          if (pos.x < -19) pos.x = -19;
-          if (pos.x > 19) pos.x = 19;
-          if (pos.z < -19) pos.z = -19;
-          if (pos.z > 19) pos.z = 19;
-          document.getElementById('cam').setAttribute('position', pos);
-        }
-    });
   AFRAME.registerComponent('focusing', {
     init: function () {
       var el = this.el;
