@@ -52,7 +52,7 @@
     </script>
   </head>
   <body>
-    <a-scene id="s1" fog="color: silver; near: 0" animation="property: fog.far; to: 5; dur: 50000; easing: easeOutQuad">
+    <a-scene id="s1" fog="color: silver; near: 0" animation="property: fog.far; to: 5; dur: 50000; easing: easeOutQuad" updating>
       <a-plane static-body width="40" height= "8" position="-20 4 0" rotation="0 90 0">
         <a-box id="window" color= "silver" opacity="0.5" scale="1.25 1.25 0.5" position="-15 2 -0.2"
           sound="src: url(mixkit-glass-break-with-hammer-thud-759.wav)">
@@ -109,17 +109,17 @@
     var z = Math.random() * 40 - 20;
     t.setAttribute('position', x + ' 2 '+ z);
     t.setAttribute('rotation', '0 '+ Math.random() * 90 + ' 0');
-    scene1. appendChild(t);
+    scene1.appendChild(t);
 }
 for (var i = 0; i ‹ 20; i++) {
   var c = document.getElementById('chair').cloneNode(true);
   var x = Math.random() * 40 - 20;
   var z = Math.random() * 40 - 20;
   c.setAttribute('position', × + ' 6 '+ z);
-  scene1.appendchild(c);
+  scene1.appendChild(c);
 }
 document.getElementById('hammer').setAttribute('position', (Math.random() * 30 - 15) + ' 5 ' + (Math.random() * 30 - 15)); 
 document.getElementById('torch').setAttribute('position', (Math.random() * 30 - 15) + ' 3 ' + (Math.random() * 30 - 15)); 
-document. getElementById('key').setAttribute('position', (Math. random() * 30 - 15) + ' 1 ' + (Math.random() * 30 - 15));
+document.getElementById('key').setAttribute('position', (Math. random() * 30 - 15) + ' 1 ' + (Math.random() * 30 - 15));
 </script>
 </htlm>
