@@ -52,7 +52,7 @@
   var START_TIME = 600;   // 10. minute
   var END_TIME   = 1200;  // 20. minute
 
-  function onYouTubeIframeAPIReady() {
+function onYouTubeIframeAPIReady() {
     player = new YT.Player('player', {
       height: '0',
       width: '0',
@@ -63,10 +63,18 @@
         autoplay: 1,       
         controls: 0,
         loop: 1,
+        mute: 1,
         playlist: 'i7lkCvPPO1o'
       },
       events: {
-        onReady: function(e) { e.target.playVideo(); },   
+        onReady: function(e) { 
+          e.target.playVideo();
+          // start playing after a second
+          setTimeout(function() {
+            player.unMute();
+            player.setVolume(70);
+          }, 1000);
+        },   
         onStateChange: onPlayerStateChange
       }
     });
