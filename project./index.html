@@ -60,13 +60,13 @@
       playerVars: {
         start: START_TIME,
         end: END_TIME,
-        autoplay: 1,        // bunu 1 yap
+        autoplay: 1,       
         controls: 0,
         loop: 1,
         playlist: 'i7lkCvPPO1o'
       },
       events: {
-        onReady: function(e) { e.target.playVideo(); },   // bunu ekle
+        onReady: function(e) { e.target.playVideo(); },   
         onStateChange: onPlayerStateChange
       }
     });
@@ -85,12 +85,12 @@
     var btn = document.getElementById('musicBtn');
     if (isPlaying) {
       player.pauseVideo();
-      btn.textContent = '🔇 Müzik';
+      btn.textContent = '🔇 Music';
       isPlaying = false;
     } else {
       player.seekTo(START_TIME);
       player.playVideo();
-      btn.textContent = '🔊 Müzik';
+      btn.textContent = '🔊 Music';
       isPlaying = true;
     }
   }
