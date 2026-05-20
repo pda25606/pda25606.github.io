@@ -86,7 +86,7 @@ function onYouTubeIframeAPIReady() {
     }
   }
 
-  function toggleMusic() {
+function toggleMusic() {
     if (!player) return;
     var btn = document.getElementById('musicBtn');
     if (isPlaying) {
@@ -94,6 +94,8 @@ function onYouTubeIframeAPIReady() {
       btn.textContent = '🔇 Music';
       isPlaying = false;
     } else {
+      player.unMute();
+      player.setVolume(70);
       player.playVideo();
       btn.textContent = '🔊 Music';
       isPlaying = true;
