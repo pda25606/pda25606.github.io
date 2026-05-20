@@ -74,7 +74,6 @@
 
   function onPlayerStateChange(event) {
     if (event.data === YT.PlayerState.ENDED) {
-      player.seekTo(START_TIME);
       player.playVideo();
     }
   }
