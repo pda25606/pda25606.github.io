@@ -72,7 +72,6 @@
     });
   }
 
-  // 20. dakikaya gelince tekrar 10. dakikadan başlat
   function onPlayerStateChange(event) {
     if (event.data === YT.PlayerState.ENDED) {
       player.seekTo(START_TIME);
