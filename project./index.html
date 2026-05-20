@@ -36,10 +36,10 @@
 <div id="musicContainer" style="position:fixed; bottom:10px; right:10px; z-index:9999;">
   <div id="player" style="display:none;"></div>
   <button id="musicBtn" onclick="toggleMusic()" 
-    style="background:#333; color:white; border:none; padding:8px 14px; 
-           border-radius:20px; cursor:pointer; font-size:13px;">
-    🔊 Music
-  </button>
+  style="background:#333; color:white; border:none; padding:8px 14px; 
+         border-radius:20px; cursor:pointer; font-size:13px;">
+  🔊 Music
+</button>
 </div>
 
 <script>
@@ -60,12 +60,13 @@
       playerVars: {
         start: START_TIME,
         end: END_TIME,
-        autoplay: 0,
+        autoplay: 1,        // bunu 1 yap
         controls: 0,
         loop: 1,
         playlist: 'i7lkCvPPO1o'
       },
       events: {
+        onReady: function(e) { e.target.playVideo(); },   // bunu ekle
         onStateChange: onPlayerStateChange
       }
     });
